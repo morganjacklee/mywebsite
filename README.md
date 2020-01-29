@@ -1,7 +1,6 @@
 # bulma-clean-theme
 
 [![Gem Version](https://badge.fury.io/rb/bulma-clean-theme.svg)](https://badge.fury.io/rb/bulma-clean-theme)
-![Gem](https://img.shields.io/gem/dt/bulma-clean-theme.svg)
 
 This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/) framework, providing a modern looking site to start with. 
 
@@ -10,8 +9,6 @@ This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/
 * [Installation](#installation)
 * [Usage](#usage)
     * [Pages](#pages)
-        * [Page Hero](#page-hero)
-        * [Table Of Contents](#table-of-contents)
     * [Posts](#posts)
     * [Navigation](#navigation)
     * [Colours and Styles](#colours-and-styles)
@@ -21,11 +18,6 @@ This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/
     * [Google Analytics](#google-analytics)
     * [Footer](#footer)
     * [Products](#products)
-    * [Scripts](#scripts)
-    * [Callouts](#callouts)
-    * [Favicon](#favicon)
-    * [Showcases](#showcases)
-    * [Disqus](#disqus)
 * [Contributing](#contributing)
 * [Development](#development)
 * [Licence](#licence)
@@ -57,40 +49,20 @@ Or install it yourself as:
 
 ### Pages 
 
-Create your pages as individual markdown files and use the `layout: page` for normal pages. Set the pages title and subtitle in the front matter and it will appear in the hero.
-
-#### Page Hero
+Create your pages as individual markdown files and use the `layout: page` for normal pages. Set the pages title and subtitle in the frontmatter and it will appear in the hero.
 
 **New in 0.2** 
-Heros can now display a background image if you provide a `hero_image: /path/to/image.jpg` setting in your page front matter, or in the [defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/) in your sites `_config.yml`
+Heros can now display a background image if you provide a `hero_image: /path/to/image.jpg` setting in your page frontmatter, or in the [defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/) in your sites `_config.yml`
 
-You can also set the height of the hero by providing a bulma hero height class in your front matter, such as `hero_height: is-fullwidth`. If you do not provide this, it will revert to is-medium 
-
-**New in 0.5.4**
-If you would like to add a call to action button in the hero then add `hero_link` and `hero_link_text` to the page's front matter.
-
-**New in 0.5.7**
-If you would like to hide the hero, you can set `hide_hero: true` in the page's front matter.
-
-#### Table Of Contents
-
-**New in 0.5.8**
-If you want to display a table of contents (toc) then add `toc: true` to your page's front matter. You can customise the default table of contents title by setting `toc_title: My Custom Title` in the page's front matter. 
+You can also set the height of the hero by providing a bulma hero height class in your frontmatter, such as `hero_height: is-fullwidth`. If you do not provide this, it will revert to is-medium 
 
 ### Posts
 
 If you want posts, create a `_posts` directory to store your posts as per normal Jekyll usage, with the `layout: post`. Next create a `blog` directory with an index.html file that has `layout: blog`
 
-Set the paginate and the paginate_path up in the `_config.yaml` to configure the posts per page and the blog pagination path.
+**New in 0.2** It will now display an image in the blog page if you set `image: /path/to/image.jpg` in your post's or page's frontmatter, or in the [defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/) in your sites `_config.yml`
 
-```yaml
-paginate: 5
-paginate_path: "/blog/page:num"
-```
-
-**New in 0.2** It will now display an image in the blog page if you set `image: /path/to/image.jpg` in your post's or page's front matter, or in the [defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/) in your sites `_config.yml`
-
-You can also set the height of the hero by providing a Bulma hero height class in your front matter, such as `hero_height: is-fullwidth`. If you do not provide this, it will revert to is-medium
+You can also set the height of the hero by providing a bulma hero height class in your frontmatter, such as `hero_height: is-fullwidth`. If you do not provide this, it will revert to is-medium
 
 
 ### Navigation
@@ -135,7 +107,7 @@ If you want to show the sidebar with latest posts then set `show_sidebar: true` 
 
 The menubar gets its content from a data file in your site's `_data` directory. Simply set the name of your data file in the page's menubar setting in the frontmatter. 
 
-```yaml
+```yml
 show_sidebar: false
 menubar: example_menu
 ```
@@ -146,7 +118,7 @@ You will probably want to disable the show_sidebar otherwise there will be littl
 
 Create a data file in the _data directory and use the following format (if using yml)
 
-```yaml
+```yml
 - label: Example Menu
   items:
     - name: Home
@@ -170,7 +142,7 @@ For the current page to have an active class, ensure the `link:` format matches 
 
 You may make multiple menus in the same file, separated by the label
 
-```yaml
+```yml
 - label: Menu Label
   items:
     - name: Example item
@@ -194,9 +166,9 @@ You may make multiple menus in the same file, separated by the label
 
 **New in 0.4**
 
-The tabs gets its content from a data file in your site's `_data` directory. Simply set the name of your data file in the page's menubar setting in the front matter. 
+The tabs gets its content from a data file in your site's `_data` directory. Simply set the name of your data file in the page's menubar setting in the frontmatter. 
 
-```yaml
+```yml
 title: Page with tabs
 subtitle: Demo page with tabs
 layout: page
@@ -211,7 +183,7 @@ Tabs can be used in conjunction with menubar and/or sidebar if you wish.
 
 Create a data file in the _data directory and use the following format (if using yml)
 
-```yaml
+```yml
 alignment: is-left
 style: is-boxed
 size: is-large
@@ -257,7 +229,7 @@ To enable Google Analytics add `google_analytics: UA-xxxxxxxx` to your `_config.
 
 To add some footer links, create a yaml file in the `_data` directory using the following format
 
-```yaml
+```yml
 - name: Blog
   link: /blog/
 - name: About
@@ -268,15 +240,9 @@ To add some footer links, create a yaml file in the `_data` directory using the 
 
 Then add the name of your yaml file (without the .yml extension) into the footer_menu setting in the `_config.yml`
 
-```yaml
+```yml
 footer_menu: example_footer_menu
 ```
-
-#### Hiding the footer
-
-**New in 0.5.2**
-
-If you would like to hide the footer on a particular page then set `hide_footer: true` in the page's frontmatter.
 
 ### Products
 
@@ -288,7 +254,8 @@ Now you can add simple product pages to your site using collections.
 
 Start by creating a `_products` directory to hold your product pages and create a new page for each product, such as `product1.md`. In the front matter for this page you can set the standard settings, such as your title, subtitle, description (for meta-description), hero_image, as well as the additional product settings such as price, product_code, image, features and rating. 
 
-```yaml
+```yml
+---
 title: Product 1 Name
 subtitle: Product 1 tagline here
 description: This is a product description
@@ -305,13 +272,14 @@ features:
     - label: Available in multiple sizes
       icon: fa-fighter-jet
 rating: 3
+---
 ```
 
 The text you write for the page content will be displayed as the product description. 
 
 Next, add the following to your `_config.yml` to use collections to process the product pages and output them as individual pages. 
 
-```yaml
+```yml
 collections:
   products: 
     output: true
@@ -326,7 +294,7 @@ You can also set default product page values here if you like, such as the layou
 
 To add reviews to your product page, create a `reviews` directory in the `_data` directory and add a yml file with the name of the product_code from the product page, for example `_data/reviews/ABC124.yml`. Create the reviews using the following format:
 
-```yaml
+```yml
 - name: Mr E Xample
   rating: 4
   title: Great product, highly recommended
@@ -349,129 +317,15 @@ If you don't want to display an avatar image then a default user icon will be di
 
 To create a page listing your products you will need to create a product category page. Create a page, for example `products.md`, with the `layout: product-category` in the frontmatter. You can set the sort order of the products using `sort: title` to sort by the title, or by any setting in your product pages, such as price, rating or any custom frontmatter tags you wish to set. 
 
-```yaml
+```yml
+---
 title: Products
 subtitle: Check out our range of products
 layout: product-category
 show_sidebar: false
 sort: title
+---
 ```
-
-### Scripts
-
-**New in 0.5.2**
-
-There are two new files within the includes directory called `head-scripts.html` and `footer-scripts.html`. These are empty files by default but allow you to add any additional JavaScript to your site, such as the script for AddThis share buttons, in the `<head>` or after the `<footer>` of the page.
-
-### Callouts
-
-**New in 0.5.4**
-
-You can now add callouts to a page to make a landing page style layout. 
-
-#### Create a callout data file
-
-Create a data file following the below format. The style is for classes to set the background colour and sizes you would like to use of the Bulma hero container for the callouts. 
-
-**New in 0.5.7** You can set the height of the callouts in the data file, such as is-small, is-medium or is-large. If unset it will be is-medium by default.
-
-The items have 5 fields, but only the title and subtitle are required. 
-
-```yaml
-style: is-light
-height: is-medium
-items:
-  - title: Example callout 1
-    subtitle: Example subtitle 1
-    icon: fa-space-shuttle
-    description: >
-      The example description text goes here and can be multiple lines.
-
-      For example, such as this. 
-    call_to_action_name: Call to action 1
-    call_to_action_link: /page-1/
-```
-
-#### Set the callouts in the frontmatter
-
-To display the callouts on your page, add a callouts property in the frontmatter and set it to the name of your data file without the extension.
-
-```yaml
-layout: page
-title: Example Landing Page
-subtitle: This is an example landing page
-callouts: example_callouts
-```
-
-### Favicon
-
-The default favicon path is `{{ site.baseurl }}/favicon.png` but you can overwrite it in the sites `_config.yml` like this `favicon: /path/to/favicon.png`
-
-### Showcases
-
-Showcases allow you to display your work to others using a simple layout. 
-
-#### Creating A Showcase Datafile
-
-Create a datafile in your sites `_data` directory in the following format. Subtitle, features and tags are not required. 
-
-The description text accepts markdown and is run through the markdownify filter on the page.
-
-The image_ratio will default to is-16by9 if it is not defined and accepts the [Bulma image](https://bulma.io/documentation/elements/image/) classes.
-
-To display GitHub Stars, Forks and Watchers badges add your GitHub user and repo name to the github setting, such as `chrisrhymes/bulma-clean-theme`
-
-To change the default styles of the features, set `features_styles`. This uses the styles from [bulma-block-list](https://www.csrhymes.com/bulma-block-list/) npm package.
-
-```yaml
-intro: |-
-  This is some introduction text for the showcases.
-  
-  ## Example Heading
-  It can convert markdown format
-
-items:
-  - title: Example showcase item
-    subtitle: Example subtitle
-    description: |-
-      This is the example description for this item that you are showcasing and has an image, title, description, tags and a link.
-    features:
-      - This is a feature
-      - This is a feature
-    features_styles: is-centered is-outlined is-primary
-    image: https://via.placeholder.com/1024x788
-    image_ratio: is-16by9
-    link: http://www.example.com
-    link_text: View example
-    tags: PHP,CSS,JavaScript
-    github: user/repo-name
-```
-
-#### Displaying the Showcase
-
-Set the showcase in the page's front matter to be the name of the showcase data file without the extension. This gives you the ability to create multiple showcases to be used on different pages. 
-
-```yaml
-title: Showcase
-subtitle: An example showcase page
-layout: page
-showcase: showcase_example
-show_sidebar: false
-```
-
-### Disqus
-
-Disqus comments are available for posts. To be able to use them, you need to set your disqus shortname in `_config.yml`. Then you need to set your Jekyll environment to production: 
-
-```JEKYLL_ENV=production bundle exec jekyll build```. 
-
-Comments are enabled by default. If you want to disable them, set in the front matter this setting: 
-
-```markdown
-comments: false
-```
-
-
 
 ## Contributing
 

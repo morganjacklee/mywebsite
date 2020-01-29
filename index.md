@@ -1,52 +1,19 @@
 ---
-title: Bulma Clean Theme
-subtitle: This is the demo site for Bulma Clean Theme
+title: DartLife
+subtitle: This is the website for DartLife APP
 layout: page
-callouts: home_callouts
-show_sidebar: true
 ---
 
-# Bulma Clean Theme demo website
+# Description
 
-This website showcases the options for the Bulma Clean theme. The theme is available as a ruby gem or can be used with GitHub pages. 
+Description: Unlike some big cities, Hanover does not provide us much entertainment. Most of students have no idea what to do in their leisure time. So we would like to design an application that can provide students some options about what to do, where to eat and what to read.Our app will have several parts, for example, in activity page people can share information of all kinds of activities including place, date etc. In movie page, people can search the movie that they are interested in. Also, they can write review and rate the movie.
 
-[![Gem Version](https://badge.fury.io/rb/bulma-clean-theme.svg)](https://badge.fury.io/rb/bulma-clean-theme)
-![Gem](https://img.shields.io/gem/dt/bulma-clean-theme.svg)
+## Team member 
 
-## Ruby Gem
+Molin Yang(C)
 
-The ruby gem is available on the Ruby Gems website at the following location. [https://rubygems.org/gems/bulma-clean-theme](https://rubygems.org/gems/bulma-clean-theme)
+Fan He
 
 ## GitHub Pages
 
-The theme can be used with GitHub Pages bu setting the `remote_theme` in your Jekyll sites `_config.yml`
-
-```yml
-remote_theme: chrisrhymes/bulma-clean-theme
-```
-
-## Instructions
-
-For full instructions, please see the Readme at the GitHub repo:
-[https://github.com/chrisrhymes/bulma-clean-theme/blob/master/README.md](https://github.com/chrisrhymes/bulma-clean-theme/blob/master/README.md)
-
-## Page Layouts
-
-This demo site showcases the available page layout options.
-
-* Page With Sidebar
-* Page Without Sidebar
-* Page With Menubar
-* Page With Tabs
-* Page Without Footer
-* Page Without Hero
-* Page With Contents
-* Landing Page With Callouts
-* Blog
-* Post
-
-## Supported By JetBrains
-
-JetBrains have kindly provided an Open Source licence to aid in the future development of Bulma Clean Theme.
-
-[![JetBrains](img/jetbrains-variant-4.svg)](https://www.jetbrains.com/?from=bulma-clean-theme)
+https://github.com/hf532304/DartLife

@@ -10,7 +10,6 @@
   "author": "chrisrhymes",
   "license": "MIT",
   "dependencies": {
-    "bulma": "^0.8",
-    "bulma-block-list": "^0.1.1"
+    "bulma": "^0.7.4"
   }
 }

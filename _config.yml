@@ -1,24 +1,15 @@
 # Site Settings
-title: Bulma Clean Theme
-tagline: Bulma Clean Theme
+title: DartLife 
+tagline: DartLife
 email: your-email@domain.com
 description: >
-  The demo site for Bulma Clean Theme, made for Jekyll and GitHub pages websites
-baseurl: "/bulma-clean-theme"
-url: "https://www.csrhymes.com"
+  This is the website for the DartLife app.
+baseurl: "/"
+url: "https://hf532304.github.io"
 permalink: pretty
-#favicon: /path/to/favicon.png
 
 paginate: 5
 paginate_path: "/blog/page:num"
-
-# Disqus Comments
-disqus:
-  # Leave shortname blank to disable comments site-wide.
-  # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
-  # shortname: my_disqus_shortname
-  shortname: csrhymes
-
 
 plugins:
   - jekyll-sitemap
@@ -36,7 +27,7 @@ exclude:
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/
-  - vendor/ruby/
+  - vendor/ruby/ 
 
 livereload: true
 
@@ -60,8 +51,8 @@ defaults:
     values:
       author: "C.S. Rhymes"
       layout: post
-      image: https://via.placeholder.com/1200x800
-      show_sidebar: true
+      image: https://via.placeholder.com/800x600
+      show_sidebar: false
 
 markdown: kramdown
 highlighter: rouge
