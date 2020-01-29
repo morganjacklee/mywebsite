@@ -1,11 +1,11 @@
 # Site Settings
-title: DartLife 
+title: Hi, I am Morgan. 
 tagline: DartLife
 email: your-email@domain.com
 description: >
   This is the website for the DartLife app.
 baseurl: "/"
-url: "https://hf532304.github.io"
+url: "https://morganjacklee.github.io"
 permalink: pretty
 
 paginate: 5
