@@ -41,6 +41,7 @@ exclude:
 livereload: true
 
 sass:
+<<<<<<< HEAD
   style: compressed
   source_dir: _sass
 
@@ -74,3 +75,21 @@ collections:
     layout: product
     image: https://via.placeholder.com/800x600
     show_sidebar: false
+=======
+  style: :expanded # You might prefer to minify using :compressed
+
+# Use the following plug-ins
+gems:
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
+
+remote_theme: chrisrhymes/bulma-clean-theme
+>>>>>>> 4d7cf27a2950f44cf791e73fde832f5e0cd79d78
